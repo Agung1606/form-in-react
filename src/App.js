@@ -26,6 +26,7 @@ export default function App() {
   return (
     <div>
       <form>
+        {/* Name */}
         <input 
           type="text"
           placeholder="Name"
@@ -33,6 +34,7 @@ export default function App() {
           onChange={handleChange}
           value={formData.name}
         />
+        {/* Email */}
         <input 
           type="text"
           placeholder="Email"
@@ -40,6 +42,7 @@ export default function App() {
           onChange={handleChange}
           value={formData.email}
         />
+        {/* Phone */}
         <input 
           type="number"
           placeholder="Phone"
@@ -47,6 +50,7 @@ export default function App() {
           onChange={handleChange}
           value={formData.phone}
         />
+        {/* isFriendly */}
         <input 
           type="checkbox"
           name="isFriendly"
@@ -55,6 +59,7 @@ export default function App() {
           id="isFriendly"
         />
         <label htmlFor="isFriendly">Are you friendly?</label>
+        {/* Employment Status */}
         <fieldset>
           <legend>Current employment status</legend>
           <input 
@@ -65,7 +70,6 @@ export default function App() {
             onChange={handleChange}
           />
           <label htmlFor="unemployed">Unemployed</label>
-
           <input 
             type="radio"
             id="part-time"
@@ -74,7 +78,6 @@ export default function App() {
             onChange={handleChange}
           />
           <label htmlFor="part-time">Part-time</label>
-
           <input 
             type="radio"
             id="full-time"
@@ -86,9 +89,11 @@ export default function App() {
         </fieldset>
         <br />
             
+            {/* Favorite Color */}
             <label htmlFor="favColor">What is your favorite color?</label>
             <br />
             <select id="favColor" name="favColor" onChange={handleChange} value={formData.favColor}>
+                <option value="">--Choose Color--</option>
                 <option value="red">Red</option>
                 <option value="orange">Orange</option>
                 <option value="yellow">Yellow</option>
